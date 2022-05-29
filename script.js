@@ -15,7 +15,7 @@ const init1 = async () => {
     MyContract.networks[networkId].address
   );
 
-  const tx = myContract.methods.setData(1);
+  const tx = myContract.methods.setData(10);
   const gas = await tx.estimateGas({from: address});
   const gasPrice = await web3.eth.getGasPrice();
   const data = tx.encodeABI();
